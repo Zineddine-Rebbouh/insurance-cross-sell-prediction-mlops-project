@@ -1,0 +1,12 @@
+# .DS_Store
+.DS_Store
+.vscode
+*.vscode
+# __pycache__
+__pycache__
+# .env
+.env
+# venv
+venv/
+# .venv
+.venv/
