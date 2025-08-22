@@ -518,9 +518,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Support
 
-- 📧 **Email**: your-email@domain.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/your-username/insurance-cross-sell-prediction-mlops-project/issues)
-- 📖 **Documentation**: [Project Wiki](https://github.com/your-username/insurance-cross-sell-prediction-mlops-project/wiki)
+- 📧 **Email**: zinedinerabouh@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Zineddine-Rebbouh/insurance-cross-sell-prediction-mlops-project/issues)
+- 📖 **Documentation**: [Project Wiki](https://github.com/Zineddine-Rebbouh/insurance-cross-sell-prediction-mlops-project/wiki)
 
 ---
 
