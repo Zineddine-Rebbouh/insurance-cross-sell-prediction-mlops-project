@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  insurance-api:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - PORT=8000
+    volumes:
+      # Mount models directory for easy model updates
+      - ./models:/app/models:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: MLflow tracking server
+  mlflow:
+    image: python:3.9-slim
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/app/mlruns
+    working_dir: /app
+    command: >
+      bash -c "pip install mlflow==2.14.3 && 
+               mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri file:///app/mlruns"
+    restart: unless-stopped
+
+  
+  # Graphana: Optional service for monitoring and logging
+  grafana:
+    image: grafana/grafana-enterprise
+    user: "472"
+    ports:
+      - "3000:3000"
+    networks:
+      - back-tier
+      - front-tier
+    restart: always
+
+networks:
+  default:
+    name: insurance-network

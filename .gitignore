@@ -1,12 +1,234 @@
-# .DS_Store
-.DS_Store
-.vscode
-*.vscode
-# __pycache__
-__pycache__
-# .env
-.env
-# venv
+# =============================================================================
+# Python-specific files
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =============================================================================
+# Virtual Environments & Dependencies
+# =============================================================================
 venv/
-# .venv
 .venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =============================================================================
+# Environment Variables & Secrets
+# =============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+config.ini
+secrets.json
+
+# =============================================================================
+# Machine Learning & Data Science
+# =============================================================================
+# Models (usually too large for git)
+/models/
+*.pkl
+*.joblib
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# Training artifacts
+/catboost_info/
+/mlruns/
+/mlartifacts/
+/logs/
+/checkpoints/
+/wandb/
+
+# Data files (usually too large)
+/data/
+*.csv
+*.parquet
+*.feather
+*.hdf5
+*.h5
+*.npz
+*.npy
+
+# Jupyter Notebook outputs
+
+
+# =============================================================================
+# IDE & Editor Settings
+# =============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# Operating System Files
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# =============================================================================
+# Testing & Coverage
+# =============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+
+# =============================================================================
+# Logs & Temporary Files
+# =============================================================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# =============================================================================
+# Docker & Containers
+# =============================================================================
+# Don't ignore Dockerfile, docker-compose.yml as they're needed
+# But ignore runtime files
+.dockerignore
+
+# =============================================================================
+# Documentation Build Files
+# =============================================================================
+docs/_build/
+site/
+
+# =============================================================================
+# Database Files
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================================================================
+# Cloud & Deployment
+# =============================================================================
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+
+# Azure
+.azure/
+
+# Heroku
+.heroku/
+
+# =============================================================================
+# Monitoring & Profiling
+# =============================================================================
+# Profiling files
+*.prof
+
+# Memory profiling
+*.mprof
+
+# =============================================================================
+# Backup Files
+# =============================================================================
+*.bak
+*.backup
+*.tmp
+*.temp
